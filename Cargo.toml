@@ -5,10 +5,15 @@ edition = "2024"
 
 [dependencies]
 rand = "0.8"
+crossbeam = "0.8"
 
 [[bin]]
 name = "main"
 path = "main.rs"
+
+[[bin]]
+name = "main_crossbeam"
+path = "main_crossbeam.rs"
 
 [[bin]]
 name = "random"

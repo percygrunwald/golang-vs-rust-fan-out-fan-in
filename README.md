@@ -58,15 +58,18 @@ A fan-in thread/goroutine consumes from the "squares channel" and accumulates th
 Using Mac OS `time`:
 
 ```
-/usr/bin/time -l go run main.go
+/usr/bin/time -l go run main.go -n 50000000 -w 3
 ```
 
-## Run and profile the Rust implementation
+## Run and profile the Rust implementations
 
 Using Mac OS `time`:
 
 ```
-/usr/bin/time -l cargo run main.rs
+/usr/bin/time -l cargo run --bin main -- -n 50000000 -w 3
+```
+```
+/usr/bin/time -l cargo run --bin main_crossbeam -- -n 50000000 -w 3
 ```
 
 ## Analysis of results
