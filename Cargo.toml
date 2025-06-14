@@ -1,0 +1,15 @@
+[package]
+name = "fan-out-fan-in"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand = "0.8"
+
+[[bin]]
+name = "main"
+path = "main.rs"
+
+[[bin]]
+name = "random"
+path = "random_rust.rs"
